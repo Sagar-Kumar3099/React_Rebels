@@ -1,0 +1,36 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/LoanOptions.css";
+
+const LoanOptions = () => {
+  const navigate = useNavigate();
+
+  const handleApplyNow = () => {
+    navigate('/loan-form');
+  };
+
+  return (
+    <section id="loans" className="loan-options">
+      <h2>Our Loan Services</h2>
+      <div className="loan-cards">
+        <div className="card">
+          <h3>Personal Loan</h3>
+          <p>Flexible repayment options for your personal needs.</p>
+          <button id="apply-now-btn" onClick={handleApplyNow}>
+            Apply Now
+          </button>
+        </div>
+        <div className="card">
+          <h3>Business Loan</h3>
+          <p>Empower your business with easy and quick loans.</p>
+          <button id="apply-now-btn" onClick={handleApplyNow}>
+            {/* //it changes */}
+            Apply Now
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default LoanOptions;
